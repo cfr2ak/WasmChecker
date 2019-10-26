@@ -1,6 +1,16 @@
 # WasmCheckers
 Checker game written in wasm
 
+## Prerequisite
+You need to install wabt before run the application.
+
+https://github.com/WebAssembly/wabt
+
+### Build the wat files
+```bash
+wat2wasm -o func_test.wasm func_test.wat
+```
+
 ## Hard coded values
 
 | Binary value | Meaning |
