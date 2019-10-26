@@ -20,27 +20,33 @@
     )
 )
 
+;; global const variables of the board
+(global $BLACK i32 (i32.const 1))
+(global $WHITE i32 (i32.const 2))
+(global $CROWN i32 (i32.const 4))
+
+;; Compare by bitmask
 ;; Determine if a piece has been crowned
 (func $isCrowned (param $piece i32) (result i32)
     (i32.eq
-    (i32.and (get_local $piece) (get_global $CROWN))
-    (get_global $CROWN)
+        (i32.and (get_local $piece) (get_global $CROWN))
+        (get_global $CROWN)
     )
 )
 
 ;; Determine if a piece is white
 (func $isWhite (param $piece i32) (result i32)
     (i32.eq
-    (i32.and (get_local $piece) (get_global $WHITE))
-    (get_global $WHITE)
+        (i32.and (get_local $piece) (get_global $WHITE))
+        (get_global $WHITE)
     )
 )
 
 ;; Determine if a piece is black
 (func $isBlack (param $piece i32) (result i32)
     (i32.eq
-    (i32.and (get_local $piece) (get_global $BLACK))
-    (get_global $BLACK)
+        (i32.and (get_local $piece) (get_global $BLACK))
+        (get_global $BLACK)
     )
 )
 
