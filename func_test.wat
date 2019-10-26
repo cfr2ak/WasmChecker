@@ -1,6 +1,5 @@
-(module
-    ​(memory $mem 1)
-    ;; global const variables of the board
+(module 
+    (memory $mem 1)
     (global $BLACK i32 (i32.const 1))
     (global $WHITE i32 (i32.const 2))
     (global $CROWN i32 (i32.const 4))
